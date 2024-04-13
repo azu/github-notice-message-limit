@@ -19,8 +19,7 @@ jobs:
             // 100 * 50
             // 1. aaa
             // 2. aaa
-            const message = Array(50).map((_, index) => {
+            const message = Array.from({ length 50 }).map((_, index) => {
               return `${index + 1}. ${"a".repeat(100 - 3)}`;
             }).join("\n");
-            
             core.notice(message, { title: "Test Notice", file: "README.md", startLine: 1, endLine: 1 });
